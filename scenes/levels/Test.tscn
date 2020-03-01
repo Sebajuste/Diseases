@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tileset/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/characters/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/miscs/Disease.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/Test.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 987.382, 37.4266 )
+
+[node name="Test" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+collision_layer = 2
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 65536, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 4, 0, 65545, 4, 0, 65546, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 4, 0, 131081, 4, 0, 131082, 3, 0, 196608, 3, 0, 196609, 5, 0, 196610, 7, 0, 196611, 7, 0, 196612, 7, 0, 196613, 6, 0, 196614, 3, 0, 196615, 3, 0, 196616, 4, 0, 196617, 4, 0, 196618, 3, 0, 262144, 3, 0, 262145, 11, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 11, 0, 262150, 3, 0, 262151, 3, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 327680, 3, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 393216, 3, 0, 393217, 14, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 14, 0, 393222, 3, 0, 393223, 3, 0, 393224, 4, 0, 393225, 4, 0, 393226, 3, 0, 458752, 3, 0, 458753, 8, 0, 458754, 7, 0, 458755, 7, 0, 458756, 7, 0, 458757, 9, 0, 458758, 3, 0, 458759, 3, 0, 458760, 4, 0, 458761, 4, 0, 458762, 3, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 3, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 3, 0, 655360, 3, 0, 655361, 3, 0, 655362, 3, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 3, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 3, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720900, 3, 0, 720901, 3, 0, 720902, 3, 0, 720903, 3, 0, 720904, 3, 0, 720905, 3, 0, 720906, 3, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Navigation2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/StaticBody2D"]
+position = Vector2( 602.697, -33.4832 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Navigation2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/StaticBody2D2"]
+position = Vector2( 631.397, 1568.93 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Navigation2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/StaticBody2D3"]
+position = Vector2( -21.3044, 699.922 )
+rotation = 1.57099
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Navigation2D"]
+position = Vector2( 1457.19, 53.127 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/StaticBody2D4"]
+position = Vector2( -21.3044, 699.922 )
+rotation = 1.57099
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 165.024, 105.233 )
+handler = "Player"
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="Character2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 500.991, 637.257 )
+handler = "AI"
+
+[node name="CommonCold" parent="Character2" instance=ExtResource( 3 )]
+contagion_radius = 92.568
+incubation_time = 20.0
+incubation_contagion = true
+symptomatic_time = 10.0
+symptomatic_contagion = true
