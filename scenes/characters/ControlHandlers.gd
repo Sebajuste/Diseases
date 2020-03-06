@@ -6,7 +6,6 @@ var handler: String = "None" setget set_handler
 class HandlerNone:
 	
 	func control(delta) -> Vector2:
-		# print("no control set")
 		return Vector2()
 
 func set_handler(value):

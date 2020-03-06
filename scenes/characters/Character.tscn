@@ -8,10 +8,10 @@
 [ext_resource path="res://scenes/characters/ContactArea.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 17.6955
+radius = 22.821
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 50.0
+radius = 44.74
 
 [node name="Character" type="KinematicBody2D"]
 collision_mask = 3
@@ -42,3 +42,8 @@ script = ExtResource( 6 )
 shape = SubResource( 2 )
 
 [node name="Diseases" type="Node2D" parent="."]
+
+[node name="HungerTimer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+[connection signal="timeout" from="HungerTimer" to="." method="_on_HungerTimer_timeout"]
